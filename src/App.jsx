@@ -1,8 +1,10 @@
-import React from 'react'
+import MainPart from "./components/MainPart"
 
 const App = () => {
   return (
-    <main className='text-5xl text-orange-500 font-bold'>App</main>
+    <main className='relative min-h-screen w-screen overflow-x-hidden'>
+      <MainPart />
+    </main>
   )
 }
 
