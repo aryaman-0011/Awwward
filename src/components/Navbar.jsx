@@ -1,4 +1,6 @@
 import { useRef } from 'react'
+import Button from './Button'
+import { TiLocation, TiLocationArrow } from 'react-icons/ti'
 
 const NavBar = () => {
     const navContainerRef = useRef(null)
@@ -12,6 +14,12 @@ const NavBar = () => {
                             src="/img/logo.png"
                             alt="logo"
                             className='w-10'
+                        />
+                        <Button
+                            id="product-button"
+                            title="Products"
+                            rightIcon={TiLocationArrow}
+                            containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
                         />
                     </div>
                 </nav>
