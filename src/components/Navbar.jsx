@@ -2,8 +2,11 @@ import { useRef } from 'react'
 import Button from './Button'
 import { TiLocation, TiLocationArrow } from 'react-icons/ti'
 
+const navItems = ['Nexus', 'Vault', 'Prologue', 'About', 'Contact']
+
 const NavBar = () => {
     const navContainerRef = useRef(null)
+
 
     return (
         <div ref={navContainerRef} className='fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6'>
@@ -18,9 +21,19 @@ const NavBar = () => {
                         <Button
                             id="product-button"
                             title="Products"
-                            rightIcon={TiLocationArrow}
+                            rightIcon={<TiLocationArrow/>}
                             containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
                         />
+                    </div>
+                    <div className='flex h-full items-center'>
+                        <div className='hidden md:block'>
+                            {navItems.map((item) => (
+                                <a key={item} href={`#${item.toLowerCase()}`} className='nav-hover-btn'>
+                                    {item}
+                                </a>
+                            ))}
+                        </div>
+
                     </div>
                 </nav>
             </header>
