@@ -2,7 +2,7 @@ import { TiLocationArrow } from "react-icons/ti"
 
 const BentoTilt = ({ children, className = '' }) => {
     return (
-        <div>
+        <div className={className}>
             {children}
         </div>
     )
