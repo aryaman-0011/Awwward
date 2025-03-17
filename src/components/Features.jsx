@@ -1,5 +1,13 @@
 import { TiLocationArrow } from "react-icons/ti"
 
+const BentoTilt = ({children, className=''}) => {
+    return (
+        <div>
+            {children}
+        </div>
+    )
+}
+
 const BentoCard = ({ src, title, description }) => {
     return (
         <div className="relative size-full">
