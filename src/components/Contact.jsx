@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ImageClipBox = (src, clipClass) => {
+const ImageClipBox = (src, clipClass) => (
   <div className={clipClass}>
     <img src={src} />
   </div>
-}
+) 
 
 const Contact = () => {
   return (
